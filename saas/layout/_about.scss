@@ -1,0 +1,39 @@
+.aboutus {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.aboutus-list {
+    display: flex;
+    align-items: center;
+}
+.aboutus-list__item {
+    width: 270px;
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+.aboutus-titles {
+    @include font(14px, 700, 16px);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.aboutus-titles__suptitles {
+    @include font(14px, 400, 24px);
+    letter-spacing: 0.03em;
+    color: #757575;
+}
+.aboutus-container {
+    width: 270px;
+    height: 120px;
+    background: #f5f4fa;
+    border-radius: 4px;
+    @extend %align;
+    margin-bottom: 30px;
+}
+.aboutus-container__img {
+    width: 70px;
+    height: 70px;
+}

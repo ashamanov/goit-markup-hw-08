@@ -1,0 +1,13 @@
+.logo {
+    @include font(26px, 700, 31px);
+    font-family: var(--secondary-font-family);
+    letter-spacing: 0.03em;
+    color: var(--secondary-color);
+    margin-right: 93px;
+}
+.logo__white {
+    color: var(--white-color);
+}
+.logo__black {
+    color: #212121;
+}
