@@ -40,6 +40,11 @@
             </li>
           </ul>
         </nav>
+        <button class="mobile-menu-open-btn" type="button" data-menu-open>
+          <svg class="mobile-menu-open-btn__icon" width="40" height="40">
+            <use href="./images/sprite.svg#burger-icon"></use>
+          </svg>
+        </button>
         <ul class="header-contacts list">
           <li class="header-contacts__item">
             <a class="header-contacts__link menu-link link" href="mailto:info@devstudio.com">
@@ -59,6 +64,52 @@
           </li>
         </ul>
       </div>
+      <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu__container">
+          <button class="mobile-menu__close-btn" type="button" data-menu-close>
+            <svg class="mobile-menu__close-icon" width="40" height="40">
+              <use href="./images/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu-list list">
+            <li class="mobile-menu-list__item">
+              <a class="mobile-menu-list__link current link" href="./index.html">Студия</a>
+            </li>
+            <li class="mobile-menu-list__item">
+              <a class="mobile-menu-list__link link" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="mobile-menu-list__item">
+              <a class="mobile-menu-list__link link" href="">Контакты</a>
+            </li>
+          </ul>
+          <ul class="mobile-menu-contacts list">
+            <li class="mobile-menu-contacts__item">
+              <a class="mobile-menu-contacts__tel-link link" href="tel:380961111111">
+                +38 096 111 11 11
+              </a>
+            </li>
+            <li class="mobile-menu-contacts__item">
+              <a class="mobile-menu-contacts__mail-link link" href="mailto:info@devstudio.com">
+                info@devstudio.com
+              </a>
+            </li>
+          </ul>
+          <ul class="mobile-menu-social-list list">
+            <li class="mobile-menu-social-list__item">
+              <a class="mobile-menu-social-list__link link" lang="en" href="">Instagram</a>
+            </li>
+            <li class="mobile-menu-social-list__item">
+              <a class="mobile-menu-social-list__link link" lang="en" href="">Twitter</a>
+            </li>
+            <li class="mobile-menu-social-list__item">
+              <a class="mobile-menu-social-list__link link" lang="en" href="">Facebook</a>
+            </li>
+            <li class="mobile-menu-social-list__item">
+              <a class="mobile-menu-social-list__link link" lang="en" href="">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
     <!--MAIN-->
     <main>
@@ -69,7 +120,6 @@
           <button class="modal-btn" type="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
-      -->
       <!--ABOUT US-->
       <section class="aboutus">
         <div class="container">
@@ -121,7 +171,6 @@
           </ul>
         </div>
       </section>
-      -->
       <!--OUR PROJECTS-->
       <section class="ourprojects">
         <div class="container">
@@ -166,13 +215,58 @@
           <h2 class="h2titles">Наша команда</h2>
           <ul class="ourteam-list list">
             <li class="ourteam-list__item">
-              <img
-                class="ourteam-list__img"
-                src="./images/our-team/igor.jpg"
-                alt="igor"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/my_team/igor_demyanenko@1x.webp 1x,
+                    ./images/desktop/my_team/igor_demyanenko@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/desktop/my_team/igor_demyanenko@1x.jpg 1x,
+                    ./images/desktop/my_team/igor_demyanenko@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/my_team/igor_demyanenko@1x.webp 1x,
+                    ./images/tablet/my_team/igor_demyanenko@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/my_team/igor_demyanenko@1x.jpg 1x,
+                    ./images/tablet/my_team/igor_demyanenko@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/my_team/igor_demyanenko@1x.webp 1x,
+                    ./images/mobile/my_team/igor_demyanenko@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/my_team/igor_demyanenko@1x.jpg 1x,
+                    ./images/mobile/my_team/igor_demyanenko@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="ourteam-list__img"
+                  src="./images/mobile/my_team/igor_demyanenko@1x.jpg"
+                  alt="igor"
+                />
+              </picture>
               <div class="teamsmember">
                 <h3 class="teamsmember__name">Игорь Демьяненко</h3>
                 <p class="teamsmember__position" lang="en">Product Designer</p>
@@ -209,13 +303,58 @@
               </div>
             </li>
             <li class="ourteam-list__item">
-              <img
-                class="ourteam-list__img"
-                src="./images/our-team/olga.jpg"
-                alt="olga"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/my_team/olga_repina@1x.webp 1x,
+                    ./images/desktop/my_team/olga_repina@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/desktop/my_team/olga_repina@1x.jpg 1x,
+                    ./images/desktop/my_team/olga_repina@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/my_team/olga_repina@1x.webp 1x,
+                    ./images/tablet/my_team/olga_repina@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/my_team/olga_repina@1x.jpg 1x,
+                    ./images/tablet/my_team/olga_repina@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/my_team/olga_repina@1x.webp 1x,
+                    ./images/mobile/my_team/olga_repina@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/my_team/olga_repina@1x.jpg 1x,
+                    ./images/mobile/my_team/olga_repina@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="ourteam-list__img"
+                  src="./images/mobile/my_team/olga_repina@1x.jpg"
+                  alt="olga"
+                />
+              </picture>
               <div class="teamsmember">
                 <h3 class="teamsmember__name">Ольга Репина</h3>
                 <p class="teamsmember__position" lang="en">Frontend Developer</p>
@@ -252,13 +391,58 @@
               </div>
             </li>
             <li class="ourteam-list__item">
-              <img
-                class="ourteam-list__img"
-                src="./images/our-team/nilokai.jpg"
-                alt="nikolai"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/my_team/nikolai_tarasov@1x.webp 1x,
+                    ./images/desktop/my_team/nikolai_tarasov@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/desktop/my_team/nikolai_tarasov@1x.jpg 1x,
+                    ./images/desktop/my_team/nikolai_tarasov@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/my_team/nikolai_tarasov@1x.webp 1x,
+                    ./images/tablet/my_team/nikolai_tarasov@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/my_team/nikolai_tarasov@1x.jpg 1x,
+                    ./images/tablet/my_team/nikolai_tarasov@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/my_team/nikolai_tarasov@1x.webp 1x,
+                    ./images/mobile/my_team/nikolai_tarasov@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/my_team/nikolai_tarasov@1x.jpg 1x,
+                    ./images/mobile/my_team/nikolai_tarasov@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="ourteam-list__img"
+                  src="./images/mobile/my_team/nikolai_tarasov@1x.jpg"
+                  alt="nikolai"
+                />
+              </picture>
               <div class="teamsmember">
                 <h3 class="teamsmember__name">Николай Тарасов</h3>
                 <p class="teamsmember__position" lang="en">Marketing</p>
@@ -295,13 +479,58 @@
               </div>
             </li>
             <li class="ourteam-list__item">
-              <img
-                class="ourteam-list__img"
-                src="./images/our-team/mikhail.jpg"
-                alt="mikhail"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/desktop/my_team/mikhail_yermakov@1x.webp 1x,
+                    ./images/desktop/my_team/mikhail_yermakov@2x.webp 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/desktop/my_team/mikhail_yermakov@1x.jpg 1x,
+                    ./images/desktop/my_team/mikhail_yermakov@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/my_team/mikhail_yermakov@1x.webp 1x,
+                    ./images/tablet/my_team/mikhail_yermakov@2x.webp 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/tablet/my_team/mikhail_yermakov@1x.jpg 1x,
+                    ./images/tablet/my_team/mikhail_yermakov@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/my_team/mikhail_yermakov@1x.webp 1x,
+                    ./images/mobile/my_team/mikhail_yermakov@2x.webp 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    ./images/mobile/my_team/mikhail_yermakov@1x.jpg 1x,
+                    ./images/mobile/my_team/mikhail_yermakov@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  class="ourteam-list__img"
+                  src="./images/mobile/my_team/mikhail_yermakov@1x.jpg"
+                  alt="mikhail"
+                />
+              </picture>
               <div class="teamsmember">
                 <h3 class="teamsmember__name">Михаил Ермаков</h3>
                 <p class="teamsmember__position" lang="en">UI Designer</p>
@@ -394,7 +623,7 @@
     <!--FOOTER-->
     <footer class="footer">
       <div class="container footer-container">
-        <div>
+        <div class="contacts-container">
           <a class="logo link" href="" lang="en">Web<span class="logo__white">Studio</span></a>
           <address class="address">
             <p class="adress-list-link geo">г. Киев, пр-т Леси Украинки, 26</p>
@@ -463,8 +692,8 @@
             <use href="./images/sprite.svg#icon-close"></use>
           </svg>
         </button>
-        <!--FORM-->
-        <p class="form-value">Оставьте свои данные, мы вам перезвоним</p>
+    <!--FORM-->
+      <p class="form-value">Оставьте свои данные, мы вам перезвоним</p>
         <form class="form">
           <label class="form-dis">
             <span class="form-dis-prompt">Имя</span>
@@ -520,5 +749,6 @@
     </div>
     <!--SCRIPT-->
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
