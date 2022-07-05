@@ -65,9 +65,9 @@ body {
   padding-right: 15px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 480px) {
   .container {
-    width: 480px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -576,14 +576,14 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/mobile/header/header@1x.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/mobile/header/header_mob@1x.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/mobile/header/header@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/mobile/header/header_mob@2x.jpg");
   }
 }
 
@@ -620,17 +620,13 @@ body {
 
 @media screen and (min-width: 768px) {
   .hero {
-    margin-left: auto;
-    margin-right: auto;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/tablet/header/header@1x.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/tablet/header/header_tab@1x.jpg");
     background-color: var(--accent-background);
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/tablet/header/header@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/tablet/header/header_tab@2x.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
@@ -638,21 +634,24 @@ body {
     max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/desktop/header/header@1x.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: var(--accent-background);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/desktop/header/header_desk@1x.jpg");
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/desktop/header/header@2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/desktop/header/header_desk@2x.jpg");
+  }
+}
+@media screen and (min-width: 1200px) {
+  .headline {
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.3636363636;
+    width: 696px;
   }
 }
 .aboutus-container {
-  width: 450px;
+  width: 100%;
   height: 120px;
   background: #f5f4fa;
   border-radius: 4px;
@@ -666,7 +665,7 @@ body {
 
 .aboutus {
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
 }
 
 .aboutus-list {
@@ -674,7 +673,7 @@ body {
 }
 
 .aboutus-list__item {
-  width: 450px;
+  width: 100%;
 }
 
 .aboutus-titles {
@@ -694,14 +693,16 @@ body {
   line-height: 1.7142857143;
   letter-spacing: 0.03em;
   color: #757575;
-}
-.aboutus-titles__suptitles:not(:last-child) {
   margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
   .aboutus-container {
     width: 354px;
+  }
+
+  .aboutus {
+    padding-bottom: 60px;
   }
 
   .aboutus-list {
@@ -1241,10 +1242,10 @@ body {
   .projects {
     margin-top: 0;
     display: flex;
-    justify-content: space-between;
   }
 
   .projects-item {
+    flex-grow: 1;
     width: 354px;
     margin-top: 0;
   }
@@ -1253,10 +1254,6 @@ body {
   }
   .projects-item:not(:nth-child(3n)) {
     margin-right: 0;
-  }
-
-  .projectsUF-1box {
-    height: 146px;
   }
 }
 @media screen and (min-width: 1200px) {

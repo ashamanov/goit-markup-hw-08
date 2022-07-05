@@ -1,5 +1,5 @@
 .aboutus-container {
-  width: 450px;
+  width: 100%;
   height: 120px;
   background: #f5f4fa;
   border-radius: 4px;
@@ -12,13 +12,13 @@
 }
 .aboutus {
   padding-top: 60px;
-  padding-bottom: 60px;
+  padding-bottom: 30px;
 }
 .aboutus-list {
   display: block;
 }
 .aboutus-list__item {
-  width: 450px;
+  width: 100%;
 }
 .aboutus-titles {
   @include font(14px, 700, 16px);
@@ -32,14 +32,19 @@
   @include font(14px, 400, 24px);
   letter-spacing: 0.03em;
   color: #757575;
-
-  &:not(:last-child) {
-    margin-bottom: 30px;
-  }
+  margin-bottom: 30px
 }
+
+@media screen and (max-width: 480px) {
+
+}
+
 @media screen and (min-width: 768px) {
   .aboutus-container {
     width: 354px ;
+  }
+  .aboutus {
+    padding-bottom: 60px;
   }
   .aboutus-list {
     display: flex;

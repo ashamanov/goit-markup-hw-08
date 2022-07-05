@@ -113,9 +113,9 @@
   .projects {
     margin-top: 0;
     display: flex;
-    justify-content: space-between;
   }
   .projects-item {
+    flex-grow: 1;
     width: 354px;
     margin-top: 0;
     
@@ -127,9 +127,7 @@
       margin-right: 0;
     }
   }
-  .projectsUF-1box {
-    height: 146px;
-  }
+
 }
 
 @media screen and (min-width: 1200px) {
