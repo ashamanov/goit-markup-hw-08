@@ -41,7 +41,6 @@
     background: rgba(255, 255, 255, 0.1);
 }
 .sub-container {
-    width: 450px;
     margin-top: 60px;
     display: block
 }
@@ -107,6 +106,9 @@
     }
     .join-container {
         margin-top: 0;
+    }
+    .sub-container {
+        width: 450px;
     }
 }
 

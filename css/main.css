@@ -65,9 +65,9 @@ body {
   padding-right: 15px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 480px) {
   .container {
-    width: 100%;
+    width: 480px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -813,6 +813,10 @@ body {
   margin-bottom: 30px;
 }
 
+.ourteam-list__img {
+  width: 100%;
+}
+
 .teamsmember {
   padding: 30px 20px;
 }
@@ -1000,7 +1004,6 @@ body {
 }
 
 .sub-container {
-  width: 450px;
   margin-top: 60px;
   display: block;
 }
@@ -1073,6 +1076,10 @@ body {
 
   .join-container {
     margin-top: 0;
+  }
+
+  .sub-container {
+    width: 450px;
   }
 }
 @media screen and (min-width: 1200px) {
